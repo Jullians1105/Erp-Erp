@@ -17,9 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(data => {
       console.log("📦 Datos recibidos:", data);
       document.getElementById("nombre").value = data.nombre || "";
+      document.getElementById("correoOriginal").value = data.correo || "";
       document.getElementById("correo").value = data.correo || "";
       document.getElementById("direccion").value = data.direccion || "";
       document.getElementById("telefono").value = data.telefono || "";
+
+      // ✅ Guardar el correo original (oculto)
+      document.getElementById("correoOriginal").value = data.correo || "";
     })
     .catch(err => {
       console.error("❌ Error al cargar datos del usuario:", err);
@@ -32,6 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
 
     const formData = new FormData();
+    formData.append("correoOriginal", document.getElementById("correoOriginal").value);
+    formData.append("correoOriginal", document.getElementById("correoOriginal").value);
     formData.append("correo", document.getElementById("correo").value);
     formData.append("nombre", document.getElementById("nombre").value);
     formData.append("direccion", document.getElementById("direccion").value);
@@ -51,6 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
           respuesta.style.color = "green";
           respuesta.innerText = data.mensaje || "Cambios guardados correctamente.";
 
+          // ✅ Actualizar correo en localStorage si fue cambiado
+          localStorage.setItem("correoUsuario", document.getElementById("correo").value);
+
           // ✅ Redirigir a la página anterior
           setTimeout(() => {
             const volverA = localStorage.getItem("paginaAnterior") || "../../streetsync/index.html";
@@ -65,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 
-  // ✅ Cerrar sesión con redirección a la página anterior
+  // ✅ Cerrar sesión
   const cerrarBtn = document.getElementById("cerrarSesion");
   if (cerrarBtn) {
     cerrarBtn.addEventListener("click", (e) => {

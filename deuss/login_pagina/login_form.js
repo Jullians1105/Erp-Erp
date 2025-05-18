@@ -37,20 +37,18 @@ document.addEventListener("DOMContentLoaded", () => {
           respuesta.style.color = "green";
           respuesta.innerText = "Inicio de sesión exitoso";
 
+          // Guardar datos
           localStorage.setItem("nombreUsuario", data.nombre);
           localStorage.setItem("correoUsuario", data.correo);
 
-          // ✅ Obtener página anterior (o usar hombre.html como fallback)
-          const volverA = localStorage.getItem("paginaAnterior") || "../generos/parte_hombre/hombre.html";
-          localStorage.removeItem("paginaAnterior"); // opcional: limpiar
+          // Obtener página anterior y redirigir
+          const volverA = localStorage.getItem("paginaAnterior") || "../../index.html";
+          console.log("➡️ Redirigiendo a:", volverA);
+          localStorage.removeItem("paginaAnterior");
 
           setTimeout(() => {
-          const volverA = localStorage.getItem("paginaAnterior") || "../generos/parte_hombre/hombre.html";
-          localStorage.removeItem("paginaAnterior");
-          console.log(`➡️ Redirigiendo a: ${volverA}`);
-          window.location.href = volverA;
-        }, 2000);
-
+            window.location.href = volverA;
+          }, 1500);
         }
       })
       .catch((err) => {

@@ -6,25 +6,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
   contenedorNombre.style.cursor = "pointer";
 
+  // Definir destino y texto
+  let destino, texto, tooltip;
+
   if (nombreUsuario) {
     const primerNombre = nombreUsuario.split(' ')[0];
-    contenedorNombre.innerHTML = `<i class="fa-solid fa-user"></i> ${primerNombre}`;
-    contenedorNombre.title = "Ver perfil";
-
-    contenedorNombre.addEventListener("click", () => {
-      // ✅ Guardar la página actual para volver luego de editar perfil
-      localStorage.setItem("paginaAnterior", window.location.href);
-      window.location.href = "../../editar_perfil/editar_perfil.html";
-    });
-
+    texto = `<i class="fa-solid fa-user"></i> ${primerNombre}`;
+    tooltip = "Ver perfil";
+    destino = "../../editar_perfil/editar_perfil.html";
   } else {
-    contenedorNombre.innerHTML = `<i class="fa-solid fa-user"></i> Iniciar Sesión`;
-    contenedorNombre.title = "Iniciar sesión";
-
-    contenedorNombre.addEventListener("click", () => {
-      // ✅ Guardar la página actual para volver luego de iniciar sesión
-      localStorage.setItem("paginaAnterior", window.location.href);
-      window.location.href = "../../login_pagina/login.html";
-    });
+    texto = `<i class="fa-solid fa-user"></i> Iniciar Sesión`;
+    tooltip = "Iniciar sesión";
+    destino = "../../login_pagina/login.html";
   }
+
+  // Asignar contenido
+  contenedorNombre.innerHTML = texto;
+  contenedorNombre.title = tooltip;
+
+  // Al hacer clic, guardar ubicación actual y redirigir
+  contenedorNombre.addEventListener("click", () => {
+    localStorage.setItem("paginaAnterior", "../generos/parte_hombre/hombre.html");
+
+    window.location.href = destino;
+  });
 });
