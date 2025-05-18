@@ -59,13 +59,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
           // ✅ Actualizar correo en localStorage si fue cambiado
           localStorage.setItem("correoUsuario", document.getElementById("correo").value);
+          localStorage.setItem("nombreUsuario", document.getElementById("nombre").value);
 
           // ✅ Redirigir a la página anterior
           setTimeout(() => {
             const volverA = localStorage.getItem("paginaAnterior") || "../../streetsync/index.html";
             localStorage.removeItem("paginaAnterior");
             window.location.href = volverA;
-          }, 2000);
+          }, 1000);
         }
       })
       .catch(err => {
