@@ -88,28 +88,41 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-
+/* Sección elecciones con grid para 4 columnas */
 .elecciones {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
-  gap: 2rem;
-  padding: 2rem 0;
+  width: 100%;
 }
 
-.elecciones img {
-  /* 🔧 Cambia aquí el tamaño de las imágenes en la sección "elecciones" */
-  width: 100px; /* <-- AJUSTA ESTE VALOR */
-  max-width: 100px; /* <-- AJUSTA ESTE VALOR */
-  height: auto;
+.grid-prendas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, max-content));
+  gap: 1rem;
+  justify-content: center;
+  padding: 2rem 1rem;
+  width: 100%;
+  max-width: 1500px; /* control de dispersión en pantallas grandes */
   margin: 0 auto;
+}
+
+.grid-prendas a {
+  display: block;
+  max-width: 250px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.grid-prendas img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
   border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.4s ease;
+  transition: transform 0.3s ease;
   display: block;
+  margin: 0 auto;
 }
 
-.elecciones img:hover {
+.grid-prendas img:hover {
   transform: scale(1.05);
 }
 
@@ -122,51 +135,24 @@
 }
 
 .feed img {
-  /* 🔧 Cambia aquí el tamaño de las imágenes en la sección "feed" */
-  width: 100%;  /* Puedes cambiar a: width: 80%; */
-  max-width: 400px; /* <-- AJUSTA ESTE VALOR */
+  width: 100%;
+  max-width: 1020px;
   height: auto;
   border-radius: 8px;
   transition: transform 0.3s ease;
 }
 
-.grid-prendas {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 3-4 columnas según ancho */
-  gap: 2rem;
-  padding: 3rem 2rem;
-  justify-items: center; /* ✅ CENTRA contenido en cada celda */
-}
-
-.grid-prendas a {
-  display: block;
-  width: 100%;
-  max-width: 250px; /* ✅ Puedes ajustar este valor */
-  text-align: center;
-}
-
-.grid-prendas img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  display: block;
-  margin: 0 auto;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-
-
-.grid-prendas img:hover {
-  transform: scale(1.05);
+/* Ajuste para pantallas grandes: reducir más el espacio */
+@media screen and (min-width: 1400px) {
+  .grid-prendas {
+    gap: 0.5rem;
+  }
 }
 
 /* Responsive ajustes */
 @media screen and (max-width: 1700px) {
-  .elecciones img {
-    /* 🔧 Tamaño responsive para elecciones (pantallas medianas) */
-    width: 90px !important;
-    max-width: 90px !important;
+  .grid-prendas img {
+    max-width: 240px !important;
   }
 }
 
@@ -218,32 +204,22 @@
     text-align: center;
   }
 
-  .elecciones img {
-    width: 80px;
-    max-width: 80px;
+  .grid-prendas img {
+    max-width: 200px;
   }
 
   .feed img {
     width: 90%;
   }
-
-  .grid-prendas img {
-    max-width: 100px;
-  }
 }
 
 @media screen and (max-width: 480px) {
-  .elecciones img {
-    width: 70px;
-    max-width: 70px;
+  .grid-prendas img {
+    max-width: 140px;
   }
 
   .feed img {
     width: 100%;
-  }
-
-  .grid-prendas img {
-    max-width: 90px;
   }
 }
 
