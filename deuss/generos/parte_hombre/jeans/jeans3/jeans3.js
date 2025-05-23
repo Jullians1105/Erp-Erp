@@ -14,12 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
     texto = `<i class="fa-solid fa-user"></i> ${primerNombre}`;
     tooltip = "Ver perfil";
     // Ruta relativa desde camisetas.html a editar perfil
-    destino = "../../../editar_perfil/editar_perfil.html";
+    destino = "../../../../editar_perfil/editar_perfil.html";
   } else {
     texto = `<i class="fa-solid fa-user"></i> Iniciar Sesión`;
     tooltip = "Iniciar sesión";
     // Ruta relativa desde camisetas.html a login
-    destino = "../../login_pagina/login.html";
+    destino = "../../../login_pagina/login.html";
   }
 
   // Asignar contenido
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Al hacer clic, guardar ubicación actual y redirigir
   contenedorNombre.addEventListener("click", () => {
     // Guardamos la página actual para volver después si es necesario
-    localStorage.setItem("paginaAnterior", "../generos/parte_hombre/jeans/jeans.html");
+    localStorage.setItem("paginaAnterior", "../generos/parte_hombre/jeans/jeans3/jeans3.html");
 
     window.location.href = destino;
   });
