@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Al hacer clic, guardar ubicación actual y redirigir
   contenedorNombre.addEventListener("click", () => {
     // Guardamos la página actual para volver después si es necesario
-    localStorage.setItem("paginaAnterior", "../generos/parte_hombre/camisetas/camiseta1/camiseta1.html");
+    localStorage.setItem("paginaAnterior", "../generos/parte_hombre/camisetas/camiseta4/camiseta4.html");
 
     window.location.href = destino;
   });
