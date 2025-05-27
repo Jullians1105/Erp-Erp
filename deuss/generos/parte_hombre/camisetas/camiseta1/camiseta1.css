@@ -176,6 +176,14 @@ padding: 0.5rem 1.2rem;
   color: white;
 }
 
+/* Botón de talla seleccionado */
+.botones-talla button.selected {
+  background: black;
+  color: white;
+  border: 2px solid black;
+}
+
+
 .btn-añadir {
 font-size: 1.1rem;
   padding: 1rem;

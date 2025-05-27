@@ -23,7 +23,7 @@
         <span id="usuarioNombre" class="btn-white">
         <i class="fa-solid fa-user"></i> Iniciar Sesión
         </span>
-    <button class="btn-white" onclick="location.href='../../en_contruccion_deuus/en_construccion_deuus.html'">
+    <button class="btn-white" onclick="location.href='../../../../carrito/carrito.html'">
         <i class="fa-solid fa-cart-shopping"></i> Carrito
     </button>
     </div>
@@ -38,24 +38,24 @@
 </div>
 
 <div class="info-producto">
-    <h2>Shorts beige de lino con pretina fija y corte clásico</h2>
-    <p class="precio">80,000 COP</p>
-    <p class="ref">Ref: DSS-H0015</p>
+    <h2 id="nombre-producto">Shorts beige de lino con pretina fija y corte clásico</h2>
+    <p class="precio" id="precio-producto">80,000 COP</p>
+    <p class="ref" id="referencia-producto">Ref: DSS-H0015</p>
 
     <div class="tallas">
         <span>Tallas:</span>
             <div class="botones-talla">
-        <button>S</button>
-        <button>M</button>
-        <button>L</button>
-        <button>XL</button>
-        <button>XXL</button>
+                <button class="talla-btn">S</button>
+                <button class="talla-btn">M</button>
+                <button class="talla-btn">L</button>
+                <button class="talla-btn">XL</button>
+                <button class="talla-btn">XXL</button>
             </div>
     </div>
 
 <div class="cantidad-container">
 <label for="cantidad" class="cantidad-label">Cantidad:</label>
-    <select id="cantidad" name="cantidad">
+    <select id="cantidad-producto" name="cantidad">
     <option value="1" selected>1</option>
     <option value="2">2</option>
     <option value="3">3</option>
@@ -70,9 +70,9 @@
 </div>
 
 
-    <button class="btn-añadir">Añadir a cesta</button>
+    <button class="btn-añadir" id="btn-añadir-cesta">Añadir a cesta</button>
 </div>
 </section>
-<script src="short3.js?v=8"></script>
+<script src="short3.js?v=10"></script>
 </body>
 </html>

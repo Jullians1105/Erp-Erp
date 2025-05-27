@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Camisa tie-dye celeste de corte relajado | DEUSS</title>
 <link rel="icon" href="../../../../../Imagenes/logo-deuss.png" type="image/png" />
-<link rel="stylesheet" href="../camiseta1/camiseta1.css?v=8" />
+<link rel="stylesheet" href="../camiseta1/camiseta1.css?v=10" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 <!-- camiseta1.css?v=8 -->
 </head>
@@ -24,7 +24,7 @@
         <span id="usuarioNombre" class="btn-white">
         <i class="fa-solid fa-user"></i> Iniciar Sesión
         </span>
-    <button class="btn-white" onclick="location.href='../../en_contruccion_deuus/en_construccion_deuus.html'">
+    <button class="btn-white" onclick="location.href='../../../../carrito/carrito.html'">
         <i class="fa-solid fa-cart-shopping"></i> Carrito
     </button>
     </div>
@@ -41,13 +41,13 @@
 </div>
 
 <div class="info-producto">
-    <h2>Camisa tie-dye celeste de corte relajado</h2>
-    <p class="precio">160,000 COP</p>
-    <p class="ref">Ref: DSS-H002</p>
+    <h2 id="nombre-producto">Camisa tie-dye celeste de corte relajado</h2>
+    <p class="precio" id="precio-producto">160,000 COP</p>
+    <p class="ref" id="referencia-producto">Ref: DSS-H002</p>
 
     <div class="cantidad-container">
         <label for="cantidad" class="cantidad-label">Cantidad:</label>
-            <select id="cantidad" name="cantidad">
+            <select id="cantidad-producto" name="cantidad">
                 <option value="1" selected>1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -64,17 +64,17 @@
     <div class="tallas">
         <span>Tallas:</span>
             <div class="botones-talla">
-        <button>S</button>
-        <button>M</button>
-        <button>L</button>
-        <button>XL</button>
-        <button>XXL</button>
+                <button class="talla-btn">S</button>
+                <button class="talla-btn">M</button>
+                <button class="talla-btn">L</button>
+                <button class="talla-btn">XL</button>
+                <button class="talla-btn">XXL</button>
             </div>
     </div>
 
-    <button class="btn-añadir">Añadir a cesta</button>
+    <button class="btn-añadir" id="btn-añadir-cesta">Añadir a cesta</button>
 </div>
 </section>
-<script src="camiseta2.js?v=8"></script>
+<script src="camiseta2.js?v=10"></script>
 </body>
 </html>

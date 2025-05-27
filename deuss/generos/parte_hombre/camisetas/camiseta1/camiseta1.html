@@ -23,7 +23,7 @@
         <span id="usuarioNombre" class="btn-white">
         <i class="fa-solid fa-user"></i> Iniciar Sesión
         </span>
-    <button class="btn-white" onclick="location.href='../../en_contruccion_deuus/en_construccion_deuus.html'">
+    <button class="btn-white" onclick="location.href='../../../../carrito/carrito.html'">
         <i class="fa-solid fa-cart-shopping"></i> Carrito
     </button>
     </div>
@@ -33,48 +33,48 @@
 <!-- CONTENIDO DEL PRODUCTO -->
 <section class="detalle-producto fade-in">
 <div class="galeria">
-    <img src="../../../../../Imagenes/camisa1.png" alt="Frontal" />
+    <img id="img-principal" src="../../../../../Imagenes/camisa1.png" alt="Frontal" />
     <img src="../../../../../Imagenes/camisaaaa.jpg" alt="Lateral 1" />
     <img src="../../../../../Imagenes/camiseta_1_3.png" alt="Posterior" />
     <img src="../../../../../Imagenes/camiseta_1_4.png" alt="Lateral 2" />
 </div>
 
 <div class="info-producto">
-    <h2>Camisa manga corta de cuadros</h2>
-    <p class="precio">150,000 COP</p>
-    <p class="ref">Ref: DSS-H001</p>
+    <h2 id="nombre-producto">Camisa manga corta de cuadros</h2>
+    <p class="precio" id="precio-producto">150,000 COP</p>
+    <p class="ref" id="referencia-producto">Ref: DSS-H001</p>
 
     <div class="tallas">
         <span>Tallas:</span>
             <div class="botones-talla">
-        <button>S</button>
-        <button>M</button>
-        <button>L</button>
-        <button>XL</button>
-        <button>XXL</button>
+                <button class="talla-btn">S</button>
+                <button class="talla-btn">M</button>
+                <button class="talla-btn">L</button>
+                <button class="talla-btn">XL</button>
+                <button class="talla-btn">XXL</button>
             </div>
     </div>
 
 <div class="cantidad-container">
 <label for="cantidad" class="cantidad-label">Cantidad:</label>
-    <select id="cantidad" name="cantidad">
-    <option value="1" selected>1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
-    <option value="6">6</option>
-    <option value="7">7</option>
-    <option value="8">8</option>
-    <option value="9">9</option>
-    <option value="10">10</option>
+    <select id="cantidad-producto" name="cantidad">
+        <option value="1" selected>1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
     </select>
 </div>
 
 
-    <button class="btn-añadir">Añadir a cesta</button>
+    <button id="btn-añadir-cesta" class="btn-añadir">Añadir a cesta</button>
 </div>
 </section>
-<script src="camiseta1.js?v=8"></script>
+<script src="camiseta1.js?v=10"></script>
 </body>
 </html>
